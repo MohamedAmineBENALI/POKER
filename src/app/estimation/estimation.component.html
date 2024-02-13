@@ -1,0 +1,25 @@
+
+{{ (service.apiValue$ | async)?.num }}
+
+
+
+  <div class="card" *ngFor="let item of (service.apiValue$ | async)?.users">
+    <div *ngIf="!aux">
+        USER: Anonymos | ESTIMATION:{{ item.Estimation}}
+        <br>
+        --------------------
+      </div>
+
+
+      <div *ngIf="aux">
+        USER: {{ item.nom}} | ESTIMATION:{{ item.Estimation}}
+        <br>
+        --------------------
+      </div>
+
+      
+  
+    
+
+</div>
+
